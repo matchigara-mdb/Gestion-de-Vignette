@@ -49,9 +49,9 @@ def get_next_id(sheet):
     data = excel_get(sheet)
     return data[-1][0] + 1 if data else 1
 
-#=========================================
+#=====================================
 #       FONCTIONS AJOUTER
-#=========================================
+#=====================================
 
 def ajouter_proprietaire():
     """Ajoute un propriétaire"""
@@ -205,11 +205,11 @@ style.theme_use('clam')
 
 # Définir des couleurs pour chaque section
 colors = {
-    "Proprietaire": {"bg": "#E3F2FD", "heading": "#1565C0"},
+    "Proprietaire": {"bg": "purple", "heading": "#1565C0"},
     "Vehicule": {"bg": "#F3E5F5", "heading": "#6A1B9A"},
     "Vignette": {"bg": "#E8F5E9", "heading": "#00695C"},
     "Paiement": {"bg": "#FFF3E0", "heading": "#E65100"},
-    "Amende": {"bg": "#FFEBEE", "heading": "#C62828"}
+    "Amende": {"bg": "#808080", "heading": "#C62828"}
 }
 
 style.configure('Title.TLabel', font=('Helvetica', 24, 'bold'), background="#f0f0f0", foreground="#003366")
