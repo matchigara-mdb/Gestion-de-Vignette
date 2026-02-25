@@ -411,23 +411,23 @@ for d in excel_get("Paiement"):
 #=================================
 
 frame_amend_form = ttk.LabelFrame(tab["Amende"], text="➕ Calculer une Amende", padding=15)
-frame_amend_form.pack(padx=15, pady=15, fill="x")
+frame_amende_form.pack(padx=15, pady=15, fill="x")
 
-input_frame_amend = tk.Frame(frame_amend_form, bg=colors["Amende"]["bg"])
-input_frame_amend.pack(fill="x", padx=10, pady=10)
+input_frame_amende = tk.Frame(frame_amende_form, bg=colors["Amende"]["bg"])
+input_frame_amende.pack(fill="x", padx=10, pady=10)
 
-tk.Label(input_frame_amend, text="Véhicule :", font=('Helvetica', 10, 'bold'), bg=colors["Amende"]["bg"], fg=colors["Amende"]["heading"]).grid(row=0, column=0, sticky="w", padx=10, pady=8)
-combobox_vehicule_amende = ttk.Combobox(input_frame_amend, width=33)
+tk.Label(input_frame_amende, text="Véhicule :", font=('Helvetica', 10, 'bold'), bg=colors["Amende"]["bg"], fg=colors["Amende"]["heading"]).grid(row=0, column=0, sticky="w", padx=10, pady=8)
+combobox_vehicule_amende = ttk.Combobox(input_frame_amende, width=33)
 combobox_vehicule_amende.grid(row=0, column=1, padx=10, pady=8)
 refresh_combobox_vehicule()
 
-tk.Label(input_frame_amend, text="Jours de Retard :", font=('Helvetica', 10, 'bold'), bg=colors["Amende"]["bg"], fg=colors["Amende"]["heading"]).grid(row=0, column=2, sticky="w", padx=10, pady=8)
-entry_jours_retard = ttk.Entry(input_frame_amend, width=35)
+tk.Label(input_frame_amende, text="Jours de Retard :", font=('Helvetica', 10, 'bold'), bg=colors["Amende"]["bg"], fg=colors["Amende"]["heading"]).grid(row=0, column=2, sticky="w", padx=10, pady=8)
+entry_jours_retard = ttk.Entry(input_frame_amende, width=35)
 entry_jours_retard.grid(row=0, column=3, padx=10, pady=8)
 
-button_frame_amend = tk.Frame(frame_amend_form, bg=colors["Amende"]["bg"])
-button_frame_amend.pack(fill="x", pady=15)
-ttk.Button(button_frame_amend, text="✅ Calculer Amende", command=calculer_amende).pack(side="left", padx=10)
+button_frame_amende = tk.Frame(frame_amende_form, bg=colors["Amende"]["bg"])
+button_frame_amende.pack(fill="x", pady=15)
+ttk.Button(button_frame_amende, text="✅ Calculer Amende", command=calculer_amende).pack(side="left", padx=10)
 
 frame_amend_table = ttk.LabelFrame(tab["Amende"], text="📊 Registre des Amendes", padding=15)
 frame_amend_table.pack(padx=15, pady=15, fill="both", expand=True)
