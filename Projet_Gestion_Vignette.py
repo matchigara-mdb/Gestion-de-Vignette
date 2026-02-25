@@ -197,7 +197,7 @@ initialize_excel()
 root = tk.Tk()
 root.title("Système de Gestion des Vignettes de Kinshasa")
 root.geometry("1200x750")
-root.configure(bg="#f0f0f0")
+root.configure(bg="#808080")
 
 # Configuration de style
 style = ttk.Style()
@@ -369,9 +369,9 @@ tree_vignette.pack(fill="both", expand=True)
 for d in excel_get("Vignette"):
     tree_vignette.insert("", "end", values=d)
 
-#=====================================
+#================================
 #     ONGLET PAIEMENT
-#=====================================
+#================================
 
 frame_paye_form = ttk.LabelFrame(tab["Paiement"], text="➕ Enregistrer un Paiement", padding=15)
 frame_paye_form.pack(padx=15, pady=15, fill="x")
@@ -406,9 +406,9 @@ tree_paiement.pack(fill="both", expand=True)
 for d in excel_get("Paiement"):
     tree_paiement.insert("", "end", values=d)
 
-#=====================================
+#=================================
 #     ONGLET AMENDE
-#=====================================
+#=================================
 
 frame_amend_form = ttk.LabelFrame(tab["Amende"], text="➕ Calculer une Amende", padding=15)
 frame_amend_form.pack(padx=15, pady=15, fill="x")
