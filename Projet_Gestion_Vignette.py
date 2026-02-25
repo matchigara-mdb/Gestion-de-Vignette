@@ -7,9 +7,9 @@ from datetime import datetime
 
 excel_file = "gestion de vignette.xlsx"
 
-#=========================================
+#=================================
 #       FICHIER EXCEL
-#=========================================
+#=================================
 
 def initialize_excel():
     """Crée le fichier Excel s'il n'existe pas"""
