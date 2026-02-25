@@ -156,7 +156,7 @@ def calculer_amende():
         return
     
     vehicule_id = vehicule_id_str.split("-")[0]
-    montant = jours_int * 10000
+    montant = jours_int * 20000
     new_id = get_next_id("Amende")
     excel_append("Amende", [new_id, vehicule_id, jours, montant])
     tree_amende.insert("", "end", values=[new_id, vehicule_id, jours, montant])
@@ -196,7 +196,7 @@ initialize_excel()
 
 root = tk.Tk()
 root.title("Système de Gestion des Vignettes de Kinshasa")
-root.geometry("1200x750")
+root.geometry("1200x800")
 root.configure(bg="#808080")
 
 # Configuration de style
@@ -264,7 +264,7 @@ tk.Label(input_frame, text="Adresse :", font=('Helvetica', 10, 'bold'), bg=color
 entry_adresse = ttk.Entry(input_frame, width=35)
 entry_adresse.grid(row=1, column=1, padx=10, pady=8)
 
-tk.Label(input_frame, text="Téléphone :", font=('Helvetica', 10, 'bold'), bg=colors["Proprietaire"]["bg"], fg=colors["Proprietaire"]["heading"]).grid(row=1, column=2, sticky="w", padx=10, pady=8)
+tk.Label(input_frame, text="Telephone :", font=('Helvetica', 10, 'bold'), bg=colors["Proprietaire"]["bg"], fg=colors["Proprietaire"]["heading"]).grid(row=1, column=2, sticky="w", padx=10, pady=8)
 entry_telephone = ttk.Entry(input_frame, width=35)
 entry_telephone.grid(row=1, column=3, padx=10, pady=8)
 
