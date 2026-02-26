@@ -23,9 +23,21 @@ def initialize_excel():
             "Vignette": ["ID", "Vehicule_ID", "Annee", "Montant"],
             "Paiement": ["ID", "Vignette_ID", "Montant_Paye", "Date"],
             "Amende": ["ID", "Vehicule_ID", "Jours_Retard", "Montant"] 
-        }
+}
 
-        for name, headers in sheets.items():
+        def initialize_excel():
+    """Crée le fichier Excel s'il n'existe pas"""
+    if not os.path.exists(excel_file):
+        wb = Workbook()
+        wb.remove(wb.active)
+    
+        sheets = {
+            "Proprietaire": ["ID", "Nom", "Commune", "Adresse", "Telephone"],
+            "Vehicule": ["ID", "Plaque", "Marque", "Proprietaire_ID"],
+            "Vignette": ["ID", "Vehicule_ID", "Annee", "Montant"],
+            "Paiement": ["ID", "Vignette_ID", "Montant_Paye", "Date"],
+            "Amende": ["ID", "Vehicule_ID", "Jours_Retard", "Montant"] 
+        }for name, headers in sheets.items():
             ws = wb.create_sheet(name)
             ws.append(headers)
         
